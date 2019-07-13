@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <header>
-      <h1>{{$title}}</h1>
+    <header class="jumbotron text-center">
+      <h1><strong>{{$title}}</strong></h1>
     </header>
 @endsection

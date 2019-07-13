@@ -6,23 +6,13 @@ export default class Index extends Component {
     constructor(props) {
         super(props);
         this.state = { 
-            post: null
+            post: true
          };
     }
     render() {
         return (
             <div className="container">
-                <div className="row justify-content-center">
-                    <div className="col-md-8">
-                        <div className="card">
-                            <div className="card-header">Blog Posts</div>
-
-                            <div className="card-body">
-                                <Post />
-                            </div>
-                        </div>
-                    </div>
-                </div>
+				{this.state.post ? <Post /> : <h3>No Post</h3> }
             </div>
         );
     }

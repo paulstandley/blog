@@ -61575,7 +61575,7 @@ function (_Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Index).call(this, props));
     _this.state = {
-      post: null
+      post: true
     };
     return _this;
   }
@@ -61585,17 +61585,7 @@ function (_Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row justify-content-center"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-md-8"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "card"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "card-header"
-      }, "Blog Posts"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "card-body"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Post__WEBPACK_IMPORTED_MODULE_2__["default"], null))))));
+      }, this.state.post ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Post__WEBPACK_IMPORTED_MODULE_2__["default"], null) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "No Post"));
     }
   }]);
 
@@ -61657,7 +61647,17 @@ function (_Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "p-2"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "I am a post")));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row justify-content-center"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-md-8"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "card"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "card-header"
+      }, "Blog Posts"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "card-body"
+      }, "Hi ya blog")))));
     }
   }]);
 

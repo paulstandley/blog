@@ -34,5 +34,26 @@ Psy Shell v0.9.9 (PHP 7.2.12 — cli) by Justin Hileman
 >>> $post->save();
 => true
 >>> quit
+Exit:  Goodbye
+
+$ php artisan route:list
++--------+----------+------------------------+------------------+------------------------------------------------------------------------+--------------+
+| Domain | Method   | URI                    | Name             | Action                                                                 | Middleware   |
++--------+----------+------------------------+------------------+------------------------------------------------------------------------+--------------+
+|        | GET|HEAD | /                      |                  | App\Http\Controllers\PagesController@index                             | web          |
+|        | GET|HEAD | about                  |                  | App\Http\Controllers\PagesController@about                             | web          |
+|        | GET|HEAD | api/user               |                  | Closure                                                                | api,auth:api |
+|        | GET|HEAD | home                   | home             | App\Http\Controllers\HomeController@index                              | web,auth     |
+|        | GET|HEAD | login                  | login            | App\Http\Controllers\Auth\LoginController@showLoginForm                | web,guest    |
+|        | POST     | login                  |                  | App\Http\Controllers\Auth\LoginController@login                        | web,guest    |
+|        | POST     | logout                 | logout           | App\Http\Controllers\Auth\LoginController@logout                       | web          |
+|        | POST     | password/email         | password.email   | App\Http\Controllers\Auth\ForgotPasswordController@sendResetLinkEmail  | web,guest    |
+|        | GET|HEAD | password/reset         | password.request | App\Http\Controllers\Auth\ForgotPasswordController@showLinkRequestForm | web,guest    |
+|        | POST     | password/reset         | password.update  | App\Http\Controllers\Auth\ResetPasswordController@reset                | web,guest    |
+|        | GET|HEAD | password/reset/{token} | password.reset   | App\Http\Controllers\Auth\ResetPasswordController@showResetForm        | web,guest    |
+|        | GET|HEAD | register               | register         | App\Http\Controllers\Auth\RegisterController@showRegistrationForm      | web,guest    |
+|        | POST     | register               |                  | App\Http\Controllers\Auth\RegisterController@register                  | web,guest    |
++--------+----------+------------------------+------------------+------------------------------------------------------------------------+--------------+
+
 
 ```

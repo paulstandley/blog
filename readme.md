@@ -12,5 +12,6 @@ $ composer create-project --prefer-dist laravel/laravel blog
 $ php artisan preset react
 $ npm install && npm run dev
 $ npm run watch
+$ php artisan make:controller PostsController --resource
 
 ```

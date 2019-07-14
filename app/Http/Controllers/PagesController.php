@@ -18,4 +18,10 @@ class PagesController extends Controller
         return view('pages.about')->with('title', $title);
     }
 
+    public function create() 
+    {
+        $title = "Create Blog";
+        return view('posts.create')->with('title', $title);
+    }
+
 }

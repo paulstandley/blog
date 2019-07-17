@@ -14,7 +14,7 @@ export default class Index extends Component {
     render() {
         return (
             <div>
-                {this.state.form ? <FormCreate /> : <h3>No Post</h3> }
+                {this.state.form ? <FormCreate /> : null }
             </div>
         );
     }

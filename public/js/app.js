@@ -61574,23 +61574,27 @@ function (_Component) {
   _createClass(FormCreate, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "form-group"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        className: "fom-control",
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "form-group"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        "for": "exampleFormControlInput1"
+      }, "Title"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
-        name: "title",
+        "class": "form-control",
+        id: "title",
         placeholder: "Title"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
-        className: "fom-control",
-        type: "textarea",
-        name: "body",
-        placeholder: "Body"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        className: "fom-control",
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "form-group"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        "for": "textarea"
+      }, "Blog"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
+        "class": "form-control",
+        id: "textarea",
+        rows: "19",
+        placeholder: "Blog"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "submit",
-        name: "create-post",
-        id: "createPost"
+        className: "btn btn-primary"
       }));
     }
   }]);
@@ -61662,7 +61666,7 @@ function (_Component) {
   _createClass(Index, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.form ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FormCreate__WEBPACK_IMPORTED_MODULE_3__["default"], null) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "No Post"));
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.form ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FormCreate__WEBPACK_IMPORTED_MODULE_3__["default"], null) : null);
     }
   }]);
 

@@ -37,7 +37,12 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        return '<h1>Yerrrrrrrrrrrrrrrr</h1>';
+        $this->validate($request, ['title' => 'required', 'body' => 'required']);
+        
+        $post = new Post;
+        $post->title = $request->input('title');
+        $post->body = $request->input('body');
+        $post->save();
     }
 
     /**

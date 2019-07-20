@@ -84,7 +84,7 @@ class PostsController extends Controller
         $post = Post::find($id);
         $post->title = $request->input('title');
         $post->body = $request->input('body');
-        $post->user_id = 2;
+        $post->user_id = 1;
         $post->save();
 
         return redirect('/posts')->with('success', 'Post Edited');

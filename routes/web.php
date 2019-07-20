@@ -22,6 +22,7 @@ Auth::routes();
 Route::get('/', 'PagesController@index');
 Route::get('/about', 'PagesController@about');
 Route::get('/create', 'PagesController@create');
+Route::get('/dashboard', 'DashboardController@index');
 Route::resource('posts', 'PostsController');
 
-Route::get('/home', 'HomeController@index')->name('home');
+

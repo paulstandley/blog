@@ -81,4 +81,8 @@ $ php artisan route:list
 |        | GET|HEAD  | register               | register         | App\Http\Controllers\Auth\RegisterController@showRegistrationForm      | web,guest    |
 +--------+-----------+------------------------+------------------+------------------------------------------------------------------------+--------------+
 
+$ composer require unisharp/laravel-ckeditor
+
+$ php artisan vendor:publish --tag=ckeditor
+
 ```

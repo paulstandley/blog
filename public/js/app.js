@@ -61587,11 +61587,11 @@ function (_Component) {
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         "class": "form-group"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        "for": "textarea"
+        "for": "body"
       }, "Blog"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
         "class": "form-control",
         name: "body",
-        id: "textarea",
+        id: "article-ckeditor",
         rows: "19",
         placeholder: "Blog"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {

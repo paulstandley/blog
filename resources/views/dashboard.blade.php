@@ -5,8 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header"><header class="text-center"><h1>{{$posts[0]->user->name}} Dashboard</h1></header></div>
-
+                <div class="card-header"><header class="text-center"><h1>Dashboard</h1></header></div>
                 <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
@@ -20,9 +19,9 @@
                         @if(count($posts) > 0)
                             <table class="table table-striped">
                                 <tr>
-                                    <th><h3>Post Title</h3></th>
-                                    <th><h3>Edit Post</h3></th>
-                                    <th><h3>Delete Post</h3></th>
+                                    <th><h4>Post Title</h4></th>
+                                    <th><h4>Edit Post</h4></th>
+                                    <th><h4>Delete Post</h4></th>
                                 </tr>
                                 @foreach($posts as $post)
                                     <tr>

@@ -13,9 +13,28 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <a class="btn btn-primary" href="{{ url('/create') }}">
-                        Create
-                    </a>
+                    <div class="panel-body">
+                        <a class="btn btn-primary" href="{{ url('/create') }}">
+                            Create
+                        </a>
+                        <h3>Your Blog Posts</h3>
+                        @if (count($posts) > 0)
+                            <table class="table table-striped">
+                                <tr>
+                                    <th>Title</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                                @foreach($posts as $post)
+                                    <tr>
+                                        <th>{{$post->title}}</th>
+                                        <th><a href="/posts/{{$post->id}}/edit" class="btn btn-primary">Edit</a></th>
+                                        <th></th>
+                                    </tr>
+                                @endforeach
+                            </table>
+                        @endif
+                    </div>
                 </div>
             </div>
         </div>

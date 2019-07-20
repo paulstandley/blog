@@ -9,6 +9,18 @@
     <hr>
     <small>Witten on {{$post->created_at}}</small>
     <br>
-    <a href="/posts" class="btn btn-primary">Go Back</a>
+    <div class="card p-2">
+        <a href="/posts" class="btn btn-primary card-item m-1">Go Back</a>
+    </div>
+    <div class="card p-2">
+        <a href="/posts/{{$post->id}}/edit" class="btn btn-success card-item m-1">Edit Post</a>
+    </div>
+    <form method="POST" action={{ action('PostsController@destroy', $post->id) }}>
+        @csrf
+        @method('DELETE')
+        <div class="card">
+            <input type="submit" value="Delete Post" class="btn btn-danger card-item m-1">
+        </div>
+      </form>
   </div>
 @endsection

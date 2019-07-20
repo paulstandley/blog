@@ -13,8 +13,8 @@
             <p>{{$post->body}}</p>
             <small>Witten on {{$post->created_at}}</small>   
           </div> 
-          <span>{{$posts->links()}}</span>
         @endforeach
+        <span>{{$posts->links()}}</span>
       </div>
     @else
       <p>No Posts</p>

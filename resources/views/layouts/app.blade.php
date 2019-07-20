@@ -27,9 +27,9 @@
             @yield('content')
         </main>
     </div>
-    <script src="/vendor/unisharp/lavarel-ckeditor/ckeditor.js"></script>
+    <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
     <script>
-       CKEDITOR.repace('article-ckeditor');
+        CKEDITOR.replace( 'article-ckeditor' );
     </script>
 </body>
 </html>

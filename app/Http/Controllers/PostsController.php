@@ -44,7 +44,7 @@ class PostsController extends Controller
         $post->user_id = 2;
         $post->save();
 
-        return redirect('/posts')->with('success'. 'Post Created');
+        return redirect('/posts')->with('success', 'Post Created');
     }
 
     /**
@@ -84,7 +84,7 @@ class PostsController extends Controller
         $post = Post::find($id);
         $post->title = $request->input('title');
         $post->body = $request->input('body');
-        $post->user_id = 1;
+        $post->user_id = auth()->user()->id;
         $post->save();
 
         return redirect('/posts')->with('success', 'Post Edited');

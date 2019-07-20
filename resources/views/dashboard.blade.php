@@ -13,8 +13,9 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    You are logged in!
+                    <a class="btn btn-primary" href="{{ url('/create') }}">
+                        Create
+                    </a>
                 </div>
             </div>
         </div>

@@ -38,6 +38,7 @@
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/dashboard">Dashboard</a>
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">
@@ -48,11 +49,6 @@
                                 @csrf
                             </form>
                         </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="navbar-brand" href="{{ url('/create') }}">
-                          Create
-                      </a>
                     </li>
                 @endguest
             </ul>

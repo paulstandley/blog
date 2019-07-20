@@ -1,7 +1,7 @@
 @if(count($errors) > 0)
-    @foreach()
+    @foreach($errors->all() as $error)
       <div class="alert alert-danger">
-        {{$errors}}
+        {{$error}}
       </div>
     @endforeach
 @endif

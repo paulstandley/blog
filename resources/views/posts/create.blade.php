@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-  <div class="jumbotron text-center">
+  <div class="p-2 text-center">
     <header>
       <h1><strong>Create Posts</strong></h1>
     </header>

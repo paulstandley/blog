@@ -61577,9 +61577,10 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         "class": "form-group"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        "for": "exampleFormControlInput1"
+        "for": "title"
       }, "Title"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
+        name: "title",
         "class": "form-control",
         id: "title",
         placeholder: "Title"
@@ -61589,6 +61590,7 @@ function (_Component) {
         "for": "textarea"
       }, "Blog"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
         "class": "form-control",
+        name: "body",
         id: "textarea",
         rows: "19",
         placeholder: "Blog"
@@ -61664,6 +61666,34 @@ function (_Component) {
   }
 
   _createClass(Index, [{
+    key: "componentWillMount",
+    value: function componentWillMount() {
+      /* I wish I had come up with this but Elharony did he did great so simple */
+      function renderScripElement(srcUrl) {
+        /* make sure its the first script tag make a script tag add atrrs */
+        var firstChildScriptTag = window.document.getElementsByTagName('script')[0]; //const secondChildScriptTag = window.document.getElementsByTagName('script')[1];
+
+        var scriptTag = window.document.createElement('script'); //const scriptTag1 = window.document.createElement('script');
+
+        scriptTag.src = srcUrl;
+        scriptTag.defer = true;
+        scriptTag.async = true;
+        /*const name = `
+        ${function gm_authFailure() {
+          window.alert("Google Maps error!");
+        }}`;*/
+
+        /* then place it in the dom as a first child */
+
+        firstChildScriptTag.parentNode.insertBefore(scriptTag, firstChildScriptTag); //secondChildScriptTag.parentNode.insertBefore(scriptTag1, secondChildScriptTag);
+        //secondChildScriptTag.parentNode.insertBefore(inside, secondChildScriptTag);
+      }
+      /* call render scrip and pass in google map url and api key */
+
+
+      renderScripElement('https://maps.googleapis.com/maps/api/js?key=AIzaSyDcheCgHTyf9zr3vcCCSOo0wrq_W95sUcA&callback=initMap');
+    }
+  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.form ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FormCreate__WEBPACK_IMPORTED_MODULE_3__["default"], null) : null);

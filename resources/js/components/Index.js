@@ -11,17 +11,9 @@ export default class Index extends Component {
             form: true
          };
     }
-    render() {
-        return (
-            <div>
-                {this.state.form ? <FormCreate /> : null }
-            </div>
-        );
-    }
-}
-
- /* I wish I had come up with this but Elharony did he did great so simple */
- function renderScripElement(srcUrl) {
+    componentWillMount() {
+         /* I wish I had come up with this but Elharony did he did great so simple */
+    function renderScripElement(srcUrl) {
     /* make sure its the first script tag make a script tag add atrrs */  
       const firstChildScriptTag = window.document.getElementsByTagName('script')[0];
       //const secondChildScriptTag = window.document.getElementsByTagName('script')[1];
@@ -42,6 +34,15 @@ export default class Index extends Component {
     }
     /* call render scrip and pass in google map url and api key */
     renderScripElement('https://maps.googleapis.com/maps/api/js?key=AIzaSyDcheCgHTyf9zr3vcCCSOo0wrq_W95sUcA&callback=initMap');
+    }
+    render() {
+        return (
+            <div>
+                {this.state.form ? <FormCreate /> : null }
+            </div>
+        );
+    }
+}
 
 if (document.getElementById('Index')) {
     ReactDOM.render(<Index />, document.getElementById('Index'));

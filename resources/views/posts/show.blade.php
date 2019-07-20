@@ -13,16 +13,18 @@
         <a href="/posts" class="btn btn-primary card-item m-1">Go Back</a>
     </div>
     @if(!Auth::guest())
-    <div class="card p-2">
-        <a href="/posts/{{$post->id}}/edit" class="btn btn-success card-item m-1">Edit Post</a>
-    </div>
-    <form method="POST" action={{ action('PostsController@destroy', $post->id) }}>
-        @csrf
-        @method('DELETE')
-        <div class="card">
-            <input type="submit" value="Delete Post" class="btn btn-danger card-item m-1">
+      @if(Auth::user()->id == $post->user_id)
+        <div class="card p-2">
+            <a href="/posts/{{$post->id}}/edit" class="btn btn-success card-item m-1">Edit Post</a>
         </div>
-      </form>   
+        <form method="POST" action={{ action('PostsController@destroy', $post->id) }}>
+          @csrf
+          @method('DELETE')
+          <div class="card">
+              <input type="submit" value="Delete Post" class="btn btn-danger card-item m-1">
+          </div>
+        </form>        
+      @endif 
     @endif
   </div>
 @endsection

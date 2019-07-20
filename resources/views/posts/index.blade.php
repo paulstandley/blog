@@ -11,7 +11,7 @@
           <div class="list-group-item text-center p-3 m-1">
             <h3><a href="/posts/{{$post->id}}">{{$post->title}}</a></h3>
             <p>{{$post->body}}</p>
-            <small>Witten on {{$post->created_at}}</small>   
+            <small>Witten on {{$post->created_at}} by {{$post->user->name}}</small>   
           </div> 
         @endforeach
         <span>{{$posts->links()}}</span>

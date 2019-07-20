@@ -7,7 +7,7 @@
     </header>
     <p>{{$post->body}}</p>
     <hr>
-    <small>Witten on {{$post->created_at}}</small>
+    <small>Witten on {{$post->created_at}} by {{$post->user->name}}</small>
     <br>
     <div class="card p-2">
         <a href="/posts" class="btn btn-primary card-item m-1">Go Back</a>

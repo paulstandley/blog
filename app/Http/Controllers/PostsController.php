@@ -56,11 +56,11 @@ class PostsController extends Controller
         // Handle File Upload
         if($request->hasFile('cover_image')) {
             // Get File Name with extension
-            $fileNameWithExt = $request->file('cover_image')->getClientOriginalImage();
+            $fileNameWithExt = $request->file('cover_image')->getClientOriginalName();
             // Get just file name
-            $fileName = pathinfo($fileNameWithExt, PATH_FILENAME);
+            $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
             // Get just extension
-            $extension = $request->file('cover_image')->getOrignalClientExtension();
+            $extension = $request->file('cover_image')->getClientOriginalExtension();
             // File Name To Store
             $fileNameToStore = $fileName.'_'.time().'.'.$extension;
             // Upload image
@@ -73,6 +73,7 @@ class PostsController extends Controller
         $post->title = $request->input('title');
         $post->body = $request->input('body');
         $post->user_id = auth()->user()->id;
+        $post->cover_image = $fileNameToStore;
         $post->save();
 
         return redirect('/posts')->with('success', 'Post Created');
@@ -115,11 +116,32 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate($request, ['title' => 'required', 'body' => 'required']);
+        $this->validate($request, [
+            'title' => 'required', 
+            'body' => 'required'
+        ]);
+
+                // Handle File Upload
+        if($request->hasFile('cover_image')) {
+            // Get File Name with extension
+            $fileNameWithExt = $request->file('cover_image')->getClientOriginalName();
+            // Get just file name
+            $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+            // Get just extension
+            $extension = $request->file('cover_image')->getClientOriginalExtension();
+            // File Name To Store
+            $fileNameToStore = $fileName.'_'.time().'.'.$extension;
+            // Upload image
+            $path = $request->file('cover_image')->storeAs('public/cover_image', $fileNameToStore);
+        }
+
         $post = Post::find($id);
         $post->title = $request->input('title');
         $post->body = $request->input('body');
         $post->user_id = auth()->user()->id;
+        if($request->hasFile('cover_image')) {
+            $post->cover_image = $fileNameToStore;
+        }
         $post->save();
 
         return redirect('/posts')->with('success', 'Post Edited');

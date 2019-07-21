@@ -5,6 +5,7 @@
     <header>
       <h1><strong>{{$post->title}}</strong></h1>
     </header>
+    <img style="width: 50%" src="/storage/cover_image/{{$post->cover_image}}" alt="downloaded">
     <p>{{$post->body}}</p>
     <hr>
     <small>Witten on {{$post->created_at}} by {{$post->user->name}}</small>

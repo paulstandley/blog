@@ -10,6 +10,9 @@
     @csrf
     @method('PUT')
     <div id="Index"></div>
+    <div class="form-group m-1">
+      <input type="file" name="cover_image" class="btn btn-success" id="file_id">
+    </div>
   </form>
    
 @endsection

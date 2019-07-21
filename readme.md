@@ -89,4 +89,6 @@ $ php artisan make:migration add_cover_image_to_posts
 
 $ php artisan migrate
 
+$ php artisan storage:link
+
 ```

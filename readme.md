@@ -85,4 +85,8 @@ $ composer require unisharp/laravel-ckeditor
 
 $ php artisan vendor:publish --tag=ckeditor
 
+$ php artisan make:migration add_cover_image_to_posts
+
+$ php artisan migrate
+
 ```

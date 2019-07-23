@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 21, 2019 at 08:00 PM
+-- Generation Time: Jul 21, 2019 at 11:06 PM
 -- Server version: 10.1.39-MariaDB
 -- PHP Version: 7.3.5
 
@@ -61,17 +61,6 @@ CREATE TABLE `posts` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `cover_image` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `posts`
---
-
-INSERT INTO `posts` (`id`, `title`, `body`, `user_id`, `created_at`, `updated_at`, `cover_image`) VALUES
-(16, 'This is my blog post', 'Made with PHP Lavaver React CSS SCSS MYSQL Bootstraps', '1', '2019-07-20 23:26:43', '2019-07-20 23:44:55', 'profile-1_1563668803.png'),
-(17, 'My Post', 'Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada', '2', '2019-07-21 13:04:36', '2019-07-21 13:04:36', '1471289354827_1563717875.jpg'),
-(18, 'My bogs better than your blog', 'Nulla quis lorem ut libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.', '3', '2019-07-21 13:07:31', '2019-07-21 13:07:31', 'FB_IMG_1460994472475_1563718051.jpg'),
-(19, 'Hello blog', 'Pellentesque in ipsum id orci porta dapibus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.', '4', '2019-07-21 13:09:34', '2019-07-21 13:09:34', 'FB_IMG_1512305885020_1563718174.jpg'),
-(21, 'Hi Iam Jim Bob', 'Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.', '5', '2019-07-21 14:08:58', '2019-07-21 14:08:58', 'noimage.jpg');
 
 -- --------------------------------------------------------
 
@@ -133,13 +122,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

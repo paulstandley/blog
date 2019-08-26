@@ -9,6 +9,7 @@
 ```BASH
 
 $ composer create-project --prefer-dist laravel/laravel blog
+$ composer update
 $ php artisan preset react
 $ npm install && npm run dev
 $ npm run watch

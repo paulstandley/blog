@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-  @if(count($post) > 0)
+  
   <div class="text-center">
     <header>
       <h1><strong>{{$post->title}}</strong></h1>
@@ -27,7 +27,7 @@
           </div>
         </form>        
       @endif 
-    @endif
+    
   </div>
   @endif
 @endsection

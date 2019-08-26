@@ -10,7 +10,7 @@
         @foreach($posts as $post)
           <div class="row">
             <div class="col-md-4 col-sm-4">
-              <img style="width: 100%" src="/storage/cover_image/{{$post->cover_image}}" alt="downloaded">          
+              <img style="width: 100%" src="/storage/cover_image/{{$post->cover_image}}" alt="cover image">          
             </div>
             <div class="col-md-8 col-sm-8">
               <div class="list-group-item text-center p-3 m-1">

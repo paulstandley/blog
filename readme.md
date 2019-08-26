@@ -10,6 +10,7 @@
 
 $ composer create-project --prefer-dist laravel/laravel blog
 $ composer update
+$ php artisan key:generate // if you need a key
 $ php artisan preset react
 $ npm install && npm run dev
 $ npm run watch

@@ -5,8 +5,8 @@
       <h1><strong>{{$title}}<strong></h1>
     </header>
     <div class="card  text-center">
-      <div class="card-header"><h2>Made by <a href="http://paulstandley.com">Paul Standley</a></h2></div>
-      <div class="card-body"><h3>This is a Laravel Blade PHP MYSQL React javaScript CSS3 Bootstrap4 SCSS Blog App</h3></div> 
-      <div class="card-footer">Thanks to <a href="http://https://www.youtube.com/user/TechGuyWeb" target="_blank">Traversy Media</a></div>
+      <div class="card-header"><h2>You will need to signin to make a post</h2></div>
+      <div class="card-body"><h3>Select a title add your blog to the body and optional add image</h3></div>
+      <div class="card-footer"><h3>Please remember this is a family freindly place</h3></div> 
     </div>
 @endsection

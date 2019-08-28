@@ -10648,7 +10648,16 @@ body {
   background-color: rgba(200, 202, 202, 0.7);
 }
 
+a {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #201d27;
+}
+
 .card-btn a {
   border-radius: 1rem;
+}
+
+#ham {
+  justify-self: stretch;
 }
 

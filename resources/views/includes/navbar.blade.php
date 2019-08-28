@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-light-gray bg-light-gray shadow-sm">
+<nav class="navbar navbar-expand-md navbar-light-gray bg-slate-gray shadow-sm">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name', 'blog') }}
@@ -10,7 +10,7 @@
             Posts
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-            <span class="navbar-toggler-icon"></span>
+            <span id="ham" class="navbar-toggler-icon"><img src="https://res.cloudinary.com/pieol2/image/upload/v1518970056/ham.png" alt="buger icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">

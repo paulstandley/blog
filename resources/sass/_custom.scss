@@ -1,5 +1,6 @@
 body {
-  background-color: rgba(200, 202, 202, 0.7);
+  background-color: $body-bg;
+  font-family:  $font-family-sans-serif;
 }
 
 a {
@@ -13,6 +14,12 @@ a {
   }
 }
 
-#ham {
-  justify-self: stretch;
+.home-wiews {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+.home-views-header {
+  font-size: 1rem;
 }

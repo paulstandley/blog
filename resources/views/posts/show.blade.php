@@ -22,7 +22,7 @@
         <form method="POST" action={{ action('PostsController@destroy', $post->id) }}>
           @csrf
           @method('DELETE')
-          <div class="card p-2 card-btn">
+          <div class="card p-2">
               <input type="submit" value="Delete Post" class="btn btn-danger">
           </div>
         </form>        

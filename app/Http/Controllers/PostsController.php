@@ -66,6 +66,10 @@ class PostsController extends Controller
             $fileNameToStore = $fileName.'_'.time().'.'.$extension;
             // Upload image
             $path = $request->file('cover_image')->storeAs('public/cover_image', $fileNameToStore);
+
+            #$rootPath = '../app/public/storage/cover_image';
+            #$client = Storage::createLocalDriver(['root' => $rootPath]);
+            #$client->put('cover_image', $fileNameToStore);
         }else{
             $fileNameToStore = 'noimage.jpg';
         }
@@ -119,7 +123,8 @@ class PostsController extends Controller
     {
         $this->validate($request, [
             'title' => 'required', 
-            'body' => 'required'
+            'body' => 'required',
+            'cover_image' => 'image|nullable|max:1999'
         ]);
 
                 // Handle File Upload
